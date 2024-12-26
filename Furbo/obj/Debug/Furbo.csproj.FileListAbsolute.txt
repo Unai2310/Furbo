@@ -1,0 +1,15 @@
+E:\Documentos\Proyectos Visual Studio\Furbo\Furbo\bin\Debug\Furbo.exe.config
+E:\Documentos\Proyectos Visual Studio\Furbo\Furbo\bin\Debug\Furbo.exe
+E:\Documentos\Proyectos Visual Studio\Furbo\Furbo\bin\Debug\Furbo.pdb
+E:\Documentos\Proyectos Visual Studio\Furbo\Furbo\bin\Debug\Newtonsoft.Json.dll
+E:\Documentos\Proyectos Visual Studio\Furbo\Furbo\bin\Debug\Newtonsoft.Json.xml
+E:\Documentos\Proyectos Visual Studio\Furbo\Furbo\obj\Debug\Furbo.csproj.AssemblyReference.cache
+E:\Documentos\Proyectos Visual Studio\Furbo\Furbo\obj\Debug\Furbo.csproj.SuggestedBindingRedirects.cache
+E:\Documentos\Proyectos Visual Studio\Furbo\Furbo\obj\Debug\Furbo.Furbo.resources
+E:\Documentos\Proyectos Visual Studio\Furbo\Furbo\obj\Debug\Furbo.Properties.Resources.resources
+E:\Documentos\Proyectos Visual Studio\Furbo\Furbo\obj\Debug\Furbo.csproj.GenerateResource.cache
+E:\Documentos\Proyectos Visual Studio\Furbo\Furbo\obj\Debug\Furbo.csproj.CoreCompileInputs.cache
+E:\Documentos\Proyectos Visual Studio\Furbo\Furbo\obj\Debug\Furbo.csproj.CopyComplete
+E:\Documentos\Proyectos Visual Studio\Furbo\Furbo\obj\Debug\Furbo.exe
+E:\Documentos\Proyectos Visual Studio\Furbo\Furbo\obj\Debug\Furbo.pdb
+E:\Documentos\Proyectos Visual Studio\Furbo\Furbo\obj\Debug\Furbo.FrmJugador.resources
