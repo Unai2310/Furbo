@@ -158,18 +158,31 @@ namespace Furbo
         {
             dgvResul.Rows.Clear();
             dgvResul.Columns.Clear();
+            
+            String resultado = "";
+            String goles = "";
+            int victorias = 0;
+            int derrotas = 0;
+            int bajas = 0;
             DataGridViewRow rowVict = new DataGridViewRow();
             if (e.RowIndex != -1)
             {
                 DataGridViewRow row = dgvStats.Rows[e.RowIndex];
                 foreach (Jornada jor in jornadas)
                 {
-                    String resultado = getResul(row.Cells[0].Value.ToString(), jor);
-                    String goles = getGoles(row.Cells[0].Value.ToString(), jor);
+                    resultado = getResul(row.Cells[0].Value.ToString(), jor, ref victorias, ref derrotas, ref bajas);
+                    goles = getGoles(row.Cells[0].Value.ToString(), jor);
                     rellenarVict(jor.nombre, goles, resultado, rowVict);
                 }
+                lblResul.Text = "Resultados de " + row.Cells[0].Value.ToString() + 
+                    "    Victorias: " + victorias.ToString() + 
+                    "    Derrotas: " + derrotas.ToString() +
+                    "    Bajas: " + bajas.ToString();
             }
-            dgvResul.Rows.Add(rowVict);
+            if (!resultado.Equals("") && !goles.Equals(""))
+            {
+                dgvResul.Rows.Add(rowVict);
+            }
         }
 
         private void rellenarVict(string nombre, String goles, string resultado, DataGridViewRow row)
@@ -199,12 +212,24 @@ namespace Furbo
         }
 
 
-        private String getResul(String nombre, Jornada jornada)
+        private String getResul(String nombre, Jornada jornada, ref int vic, ref int der, ref int baj)
         {
             foreach (Jugador jug in jornada.todos)
             {
                 if (nombre.Equals(jug.nombre))
                 {
+                    switch (jug.resultado)
+                    {
+                        case "0":
+                            vic++;
+                            break;
+                        case "1":
+                            der++;
+                            break;
+                        default:
+                            baj++;
+                            break;
+                    }
                     return jug.resultado;
                 }
             }
