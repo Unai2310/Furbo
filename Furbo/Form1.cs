@@ -111,7 +111,6 @@ namespace Furbo
         {
             if (e.RowIndex != -1)
             {
-
                 DataGridViewRow row = dgvJornadas.Rows[e.RowIndex];
                 foreach (Jornada jor in jornadas)
                 {
@@ -154,6 +153,74 @@ namespace Furbo
                     jug.ShowDialog();
                 }
             }
+        }
+        private void dgvStats_CellClick(object sender, DataGridViewCellEventArgs e) //CLICK JUGADOR
+        {
+            dgvResul.Rows.Clear();
+            dgvResul.Columns.Clear();
+            DataGridViewRow rowVict = new DataGridViewRow();
+            if (e.RowIndex != -1)
+            {
+                DataGridViewRow row = dgvStats.Rows[e.RowIndex];
+                foreach (Jornada jor in jornadas)
+                {
+                    String resultado = getResul(row.Cells[0].Value.ToString(), jor);
+                    String goles = getGoles(row.Cells[0].Value.ToString(), jor);
+                    rellenarVict(jor.nombre, goles, resultado, rowVict);
+                }
+            }
+            dgvResul.Rows.Add(rowVict);
+        }
+
+        private void rellenarVict(string nombre, String goles, string resultado, DataGridViewRow row)
+        {
+            int nuevaColumnaIndex = dgvResul.ColumnCount;
+            dgvResul.Columns.Add($"Columna{nuevaColumnaIndex + 1}", nombre);
+
+            DataGridViewTextBoxCell celda = new DataGridViewTextBoxCell();
+            celda.Value = goles.Replace("X", " ");
+            Color color;
+            switch (resultado)
+            {
+                case "0":
+                    color = Color.LightGreen;  // Gano el primer equipo
+                    break;
+                case "1":
+                    color = Color.Red;  // Gano el segundo equipo
+                    break;
+                default:
+                    color = Color.Gray;  // Resultado no definido (empate u otro)
+                    break;
+            }
+            celda.Style.BackColor = color;
+            celda.Style.SelectionBackColor = color;
+            celda.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            row.Cells.Add(celda);
+        }
+
+
+        private String getResul(String nombre, Jornada jornada)
+        {
+            foreach (Jugador jug in jornada.todos)
+            {
+                if (nombre.Equals(jug.nombre))
+                {
+                    return jug.resultado;
+                }
+            }
+            return "X-X";
+        }
+
+        private String getGoles(String nombre, Jornada jornada)
+        {
+            foreach (Jugador jug in jornada.todos)
+            {
+                if (nombre.Equals(jug.nombre))
+                {
+                    return jug.goles;
+                }
+            }
+            return "X-X";
         }
     }
 }

@@ -13,3 +13,17 @@ E:\Documentos\Proyectos Visual Studio\Furbo\Furbo\obj\Debug\Furbo.csproj.CopyCom
 E:\Documentos\Proyectos Visual Studio\Furbo\Furbo\obj\Debug\Furbo.exe
 E:\Documentos\Proyectos Visual Studio\Furbo\Furbo\obj\Debug\Furbo.pdb
 E:\Documentos\Proyectos Visual Studio\Furbo\Furbo\obj\Debug\Furbo.FrmJugador.resources
+C:\Users\Unai\Documents\GitHub\Furbo\Furbo\bin\Debug\Furbo.exe.config
+C:\Users\Unai\Documents\GitHub\Furbo\Furbo\bin\Debug\Furbo.exe
+C:\Users\Unai\Documents\GitHub\Furbo\Furbo\bin\Debug\Furbo.pdb
+C:\Users\Unai\Documents\GitHub\Furbo\Furbo\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Unai\Documents\GitHub\Furbo\Furbo\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Unai\Documents\GitHub\Furbo\Furbo\obj\Debug\Furbo.csproj.AssemblyReference.cache
+C:\Users\Unai\Documents\GitHub\Furbo\Furbo\obj\Debug\Furbo.Furbo.resources
+C:\Users\Unai\Documents\GitHub\Furbo\Furbo\obj\Debug\Furbo.FrmJugador.resources
+C:\Users\Unai\Documents\GitHub\Furbo\Furbo\obj\Debug\Furbo.Properties.Resources.resources
+C:\Users\Unai\Documents\GitHub\Furbo\Furbo\obj\Debug\Furbo.csproj.GenerateResource.cache
+C:\Users\Unai\Documents\GitHub\Furbo\Furbo\obj\Debug\Furbo.csproj.CoreCompileInputs.cache
+C:\Users\Unai\Documents\GitHub\Furbo\Furbo\obj\Debug\Furbo.csproj.Up2Date
+C:\Users\Unai\Documents\GitHub\Furbo\Furbo\obj\Debug\Furbo.exe
+C:\Users\Unai\Documents\GitHub\Furbo\Furbo\obj\Debug\Furbo.pdb
