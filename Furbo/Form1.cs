@@ -67,8 +67,8 @@ namespace Furbo
             {
                 if (entry.Value.jugados > 0)
                 {
-                    entry.Value.promedio = Decimal.Round(entry.Value.totales / entry.Value.jugados, 2);
-                    entry.Value.wr = Decimal.Round(entry.Value.victorias / entry.Value.jugados, 2) * 100;
+                    entry.Value.promedio = entry.Value.totales / entry.Value.jugados;
+                    entry.Value.wr = entry.Value.victorias / entry.Value.jugados * 100;
                 }
                 dgvStats.Rows.Add(entry.Key, entry.Value.jugados, entry.Value.promedio.ToString("F2"), entry.Value.pichichis, entry.Value.wr.ToString("F2") + "%", entry.Value.totales, entry.Value.puskas);
             }
