@@ -84,6 +84,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -101,6 +102,72 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Num1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Num2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Num3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Num4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Num5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Num6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Num7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Num8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Num9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Num10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Num11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Num12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Num13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Num14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Num15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Num16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Borrar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nuevo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Borrar1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nuevo1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

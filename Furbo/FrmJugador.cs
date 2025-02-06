@@ -4,8 +4,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,13 +19,14 @@ namespace Furbo
     {
         Stats stats;
         String nombre;
-        Dictionary<string, string> imagenes;
-        public FrmJugador(String nombre, Stats stats)
+        List<int> tops;
+        public FrmJugador(String nombre, Stats stats, List<int> tops)
         {
             InitializeComponent();
             this.stats = stats;
             this.Text = nombre;
             this.nombre = nombre;
+            this.tops = tops;
         }
 
         private async void FrmJugador_Load(object sender, EventArgs e)
@@ -33,6 +37,13 @@ namespace Furbo
 
             var parsedData = JsonConvert.DeserializeObject<Dictionary<string, string>>(jsonContent);
 
+            rellenarIndicador(tops[0], pcbJugados);
+            rellenarIndicador(tops[1], pcbGoles);
+            rellenarIndicador(tops[2], pcbPichichi);
+            rellenarIndicador(tops[3], pcbWr);
+            rellenarIndicador(tops[4], pcbTotales);
+            rellenarIndicador(tops[5], pcbPuskas);
+            
             lblNombreData.Text = this.nombre;
             lblPichichiData.Text = this.stats.pichichis.ToString();
             lblPromedioData.Text = this.stats.promedio.ToString("F2");
@@ -44,8 +55,34 @@ namespace Furbo
             {
                 if (entry.Key.Equals(this.nombre))
                 {
-                    pcbFoto.Load(entry.Value);
+                    pcbFoto.Image = await Task.Run(() => cargarImagen(entry.Value));
                 }
+            }
+        }
+
+        private Image cargarImagen(string ruta)
+        {
+            using (var client = new WebClient())
+            {
+                byte[] imageBytes = client.DownloadData(ruta);
+                using (var stream = new MemoryStream(imageBytes))
+                {
+                    return Image.FromStream(stream);
+                }
+            }
+        }
+
+        private void rellenarIndicador(int pos, PictureBox pcb)
+        {
+            if (pos == 0)
+            {
+                pcb.Image = Properties.Resources.Nuevo;
+            } else if (pos == 1)
+            {
+                pcb.Image = Properties.Resources.Borrar;
+            } else
+            {
+                pcb.Image = null;
             }
         }
 

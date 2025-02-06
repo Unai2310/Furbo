@@ -118,6 +118,72 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pcbJugados.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAMAAABHPGVmAAAABGdBTUEAALGPC/xhBQAAAA9QTFRF5eXl
+        6enp7u7u4ODg5ubmOcS+cgAAASVJREFUaEPt0zGuAyEUxdDJT/a/5h8/KwugMAXiSiOZ6hQMz/P6mz2v
+        sN4f8/3p6kHy6+qLIKpW9UV+LmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fF
+        L9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W
+        1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fF
+        L9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W
+        1EF3ookYliZiVe/PP3gDTiFwdQhHAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="pcbGoles.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAMAAABHPGVmAAAABGdBTUEAALGPC/xhBQAAAA9QTFRF5eXl
+        6enp7u7u4ODg5ubmOcS+cgAAASVJREFUaEPt0zGuAyEUxdDJT/a/5h8/KwugMAXiSiOZ6hQMz/P6mz2v
+        sN4f8/3p6kHy6+qLIKpW9UV+LmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fF
+        L9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W
+        1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fF
+        L9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W
+        1EF3ookYliZiVe/PP3gDTiFwdQhHAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="pcbPichichi.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAMAAABHPGVmAAAABGdBTUEAALGPC/xhBQAAAA9QTFRF5eXl
+        6enp7u7u4ODg5ubmOcS+cgAAASVJREFUaEPt0zGuAyEUxdDJT/a/5h8/KwugMAXiSiOZ6hQMz/P6mz2v
+        sN4f8/3p6kHy6+qLIKpW9UV+LmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fF
+        L9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W
+        1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fF
+        L9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W
+        1EF3ookYliZiVe/PP3gDTiFwdQhHAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="pcbWr.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAMAAABHPGVmAAAABGdBTUEAALGPC/xhBQAAAA9QTFRF5eXl
+        6enp7u7u4ODg5ubmOcS+cgAAASVJREFUaEPt0zGuAyEUxdDJT/a/5h8/KwugMAXiSiOZ6hQMz/P6mz2v
+        sN4f8/3p6kHy6+qLIKpW9UV+LmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fF
+        L9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W
+        1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fF
+        L9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W
+        1EF3ookYliZiVe/PP3gDTiFwdQhHAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="pcbTotales.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAMAAABHPGVmAAAABGdBTUEAALGPC/xhBQAAAA9QTFRF5eXl
+        6enp7u7u4ODg5ubmOcS+cgAAASVJREFUaEPt0zGuAyEUxdDJT/a/5h8/KwugMAXiSiOZ6hQMz/P6mz2v
+        sN4f8/3p6kHy6+qLIKpW9UV+LmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fF
+        L9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W
+        1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fF
+        L9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W
+        1EF3ookYliZiVe/PP3gDTiFwdQhHAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="pcbPuskas.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAMAAABHPGVmAAAABGdBTUEAALGPC/xhBQAAAA9QTFRF5eXl
+        6enp7u7u4ODg5ubmOcS+cgAAASVJREFUaEPt0zGuAyEUxdDJT/a/5h8/KwugMAXiSiOZ6hQMz/P6mz2v
+        sN4f8/3p6kHy6+qLIKpW9UV+LmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fF
+        L9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W
+        1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fF
+        L9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W
+        1EF3ookYliZiVe/PP3gDTiFwdQhHAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAMAAABHPGVmAAAABGdBTUEAALGPC/xhBQAAAA9QTFRF5eXl

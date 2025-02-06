@@ -7853,6 +7853,31 @@
         1EF3ookYliZiVe/PP3gDTiFwdQhHAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="tcJugadores.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAMAAABHPGVmAAAABGdBTUEAALGPC/xhBQAAAA9QTFRF5eXl
+        6enp7u7u4ODg5ubmOcS+cgAAASVJREFUaEPt0zGuAyEUxdDJT/a/5h8/KwugMAXiSiOZ6hQMz/P6mz2v
+        sN4f8/3p6kHy6+qLIKpW9UV+LmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fF
+        L9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W
+        1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fF
+        L9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W
+        1EF3ookYliZiVe/PP3gDTiFwdQhHAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="lwJugadores.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAMAAABHPGVmAAAABGdBTUEAALGPC/xhBQAAAA9QTFRF5eXl
+        6enp7u7u4ODg5ubmOcS+cgAAASVJREFUaEPt0zGuAyEUxdDJT/a/5h8/KwugMAXiSiOZ6hQMz/P6mz2v
+        sN4f8/3p6kHy6+qLIKpW9UV+LmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fF
+        L9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W
+        1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fF
+        L9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W1EF3ookYliZiV/fFL9Wev4uDLmtqEF3W
+        1EF3ookYliZiVe/PP3gDTiFwdQhHAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <metadata name="imgLista.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

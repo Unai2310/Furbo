@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +18,12 @@ namespace Furbo
     {
         private List<Jornada> jornadas;
         private Dictionary<String, Stats> stats;
+        private Dictionary<String, decimal> jugados;
+        private Dictionary<String, decimal> promedio;
+        private Dictionary<String, decimal> wr;
+        private Dictionary<String, int> pichichis;
+        private Dictionary<String, int> total;
+        private Dictionary<String, int> pusk;
         public Furbo()
         {
             InitializeComponent();
@@ -37,6 +45,13 @@ namespace Furbo
             stats.Add("Felipe", new Stats());
             stats.Add("Pol", new Stats());
             stats.Add("Invitados", new Stats());
+
+            jugados = new Dictionary<string, decimal>();
+            promedio = new Dictionary<string, decimal>();
+            wr = new Dictionary<string, decimal>();
+            pichichis = new Dictionary<string, int>();
+            total = new Dictionary<string, int>();
+            pusk = new Dictionary<string, int>();
         }
 
         private async void Furbo_Load(object sender, EventArgs e)
@@ -45,13 +60,15 @@ namespace Furbo
 
             String jsonContent = await downloadJsonContent(url);
 
-            dgvJornadas.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            String jsonContentImg = await downloadJsonContent("https://pastebin.com/raw/U86EbJHE");
+
+            var parsedImg = JsonConvert.DeserializeObject<Dictionary<string, string>>(jsonContentImg);
 
             if (!string.IsNullOrEmpty(jsonContent))
             {
                 var parsedData = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, string>>>(jsonContent);
 
-                prbBarra.Maximum = parsedData.Count;
+                prbBarra.Maximum = parsedData.Count + parsedImg.Count;
                 foreach (KeyValuePair<string, Dictionary<string, string>> entry in parsedData)
                 {
                     Jornada jornada = new Jornada(entry.Value, entry.Key, stats);
@@ -62,16 +79,30 @@ namespace Furbo
             }
 
             adjustDgv();
-
+            
+            int i = 0;
             foreach (KeyValuePair<string, Stats> entry in stats)
             {
                 if (entry.Value.jugados > 0)
                 {
                     entry.Value.promedio = entry.Value.totales / entry.Value.jugados;
                     entry.Value.wr = entry.Value.victorias / entry.Value.jugados * 100;
+                    jugados.Add(entry.Key, entry.Value.jugados);
+                    promedio.Add(entry.Key, entry.Value.promedio);
+                    wr.Add(entry.Key, entry.Value.wr);
+                    pichichis.Add(entry.Key, entry.Value.pichichis);
+                    total.Add(entry.Key, entry.Value.totales);
+                    pusk.Add(entry.Key, entry.Value.puskas);
+                    imgLista.Images.Add(await Task.Run(() => cargarImagen(parsedImg[entry.Key])));
+                    ListViewItem lista = new ListViewItem(entry.Key, i);
+                    lwJugadores.Items.Add(lista);
+                    i++;
+                    prbBarra.PerformStep();
                 }
                 dgvStats.Rows.Add(entry.Key, entry.Value.jugados, entry.Value.promedio.ToString("F2"), entry.Value.pichichis, entry.Value.wr.ToString("F2") + "%", entry.Value.totales, entry.Value.puskas);
             }
+            dgvJornadas.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
             prbBarra.Hide();
         }
 
@@ -146,11 +177,18 @@ namespace Furbo
         {
             ListView lv = sender as ListView;
             String selectedItem = lv.SelectedItems[0].Text;
+            List<int> tops = new List<int>();
+            tops.Add(getPosDec(jugados, selectedItem));
+            tops.Add(getPosDec(promedio, selectedItem));
+            tops.Add(getPosInt(pichichis, selectedItem));
+            tops.Add(getPosDec(wr, selectedItem));
+            tops.Add(getPosInt(total, selectedItem));
+            tops.Add(getPosInt(pusk, selectedItem));
             foreach (KeyValuePair<string, Stats> entry in stats)
             {
                 if (entry.Key.Equals(selectedItem))
                 {
-                    FrmJugador jug = new FrmJugador(entry.Key, entry.Value);
+                    FrmJugador jug = new FrmJugador(entry.Key, entry.Value, tops);
                     jug.ShowDialog();
                 }
             }
@@ -247,6 +285,75 @@ namespace Furbo
                 }
             }
             return "X-X";
+        }
+
+        private int getPosDec(Dictionary<String, decimal> dict, String nombre)
+        {
+            decimal maxValue = dict.Max(x => x.Value);
+            decimal minValue = dict.Min(x => x.Value);
+            if (maxValue == dict[nombre])
+            {
+                return 0;
+            }
+            else if (minValue == dict[nombre])
+            {
+                return 1;
+            }
+            else
+            {
+                return 2;
+            }
+        }
+
+        private int getPosInt(Dictionary<String, int> dict, String nombre)
+        {
+            int maxValue = dict.Max(x => x.Value);
+            int minValue = dict.Min(x => x.Value);
+            if (maxValue == dict[nombre])
+            {
+                return 0;
+            }
+            else if (minValue == dict[nombre])
+            {
+                return 1;
+            }
+            else
+            {
+                return 2;
+            }
+        }
+
+        private Image cargarImagen(string ruta)
+        {
+            using (var client = new WebClient())
+            {
+                byte[] imageBytes = client.DownloadData(ruta);
+                using (var stream = new MemoryStream(imageBytes))
+                {
+                    return Image.FromStream(stream);
+                }
+            }
+        }
+
+        private void lwJugadores_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            ListView lv = sender as ListView;
+            String selectedItem = lv.SelectedItems[0].Text;
+            List<int> tops = new List<int>();
+            tops.Add(getPosDec(jugados, selectedItem));
+            tops.Add(getPosDec(promedio, selectedItem));
+            tops.Add(getPosInt(pichichis, selectedItem));
+            tops.Add(getPosDec(wr, selectedItem));
+            tops.Add(getPosInt(total, selectedItem));
+            tops.Add(getPosInt(pusk, selectedItem));
+            foreach (KeyValuePair<string, Stats> entry in stats)
+            {
+                if (entry.Key.Equals(selectedItem))
+                {
+                    FrmJugador jug = new FrmJugador(entry.Key, entry.Value, tops);
+                    jug.ShowDialog();
+                }
+            }
         }
     }
 }
